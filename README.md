@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Standard-C++23-blue?style=for-the-badge" alt="C++23" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
-  <img src="https://img.shields.io/badge/Questions-200%2B-orange?style=for-the-badge" alt="200+ Questions" />
+  <img src="https://img.shields.io/badge/Questions-300%2B-orange?style=for-the-badge" alt="300+ Questions" />
 </p>
 
 <h1 align="center">🚀 C++ Mastery: From Foundations to Expert</h1>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <i>12 in-depth modules • 200+ interview questions with answers • C++11 through C++23 • Hundreds of compilable code examples</i>
+  <i>12 in-depth modules • 300+ interview questions with answers • C++11 through C++23 • Hundreds of compilable code examples</i>
 </p>
 
 ---
@@ -145,11 +145,11 @@ cl /std:c++latest ...
 | Metric | Value |
 |--------|-------|
 | Total Modules | 13 (including overview) |
-| Content Size | ~260 KB of pure technical content |
-| Interview Questions | **200+** with detailed answers |
+| Content Size | ~350 KB of pure technical content |
+| Interview Questions | **300+** (including 110-question master bank in Mod 12) |
 | C++ Standards Covered | C++98 → C++23 |
 | Code Examples | Hundreds of compilable snippets |
-| Topics Covered | 50+ major C++ topics |
+| Topics Covered | 60+ major C++ topics |
 
 ---
 
