@@ -2,17 +2,17 @@
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Standard-C++23-blue?style=for-the-badge" alt="C++23" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
-  <img src="https://img.shields.io/badge/Questions-300%2B-orange?style=for-the-badge" alt="300+ Questions" />
+  <img src="https://img.shields.io/badge/Questions-350%2B-orange?style=for-the-badge" alt="350+ Questions" />
 </p>
 
-<h1 align="center">🚀 C++ Mastery: From Foundations to Expert</h1>
+<h1 align="center">🚀 C++ Mastery: From Foundations to Expert & HFT</h1>
 
 <p align="center">
   <b>A comprehensive, self-contained C++ course covering beginner to advanced topics — designed for experienced developers who want to revamp, deepen, and solidify their C++ knowledge.</b>
 </p>
 
 <p align="center">
-  <i>12 in-depth modules • 300+ interview questions with answers • C++11 through C++23 • Hundreds of compilable code examples</i>
+  <i>13 in-depth modules • 350+ interview questions with answers • C++11 through C++23 • High-Frequency Trading & Low Latency Systems</i>
 </p>
 
 ---
@@ -47,7 +47,8 @@ This course is specifically designed for:
 | **09** | [Lambda & Functional C++](./09-lambdas-functional-cpp.md) | Capture mechanics, generic lambdas, `std::function`, higher-order functions, recursive lambdas, overloaded pattern |
 | **10** | [Error Handling & Exception Safety](./10-error-handling-exceptions.md) | Exception guarantees, `noexcept`, scope guards, `std::expected` (C++23), error codes vs exceptions, defensive programming |
 | **11** | [Design Patterns & Best Practices](./11-design-patterns-best-practices.md) | GoF patterns in modern C++, CRTP, pimpl, type erasure, NVI, copy-and-swap, Core Guidelines, anti-patterns |
-| **12** | [Performance & Interview Mastery](./12-performance-interview-mastery.md) | CPU cache, SoA/AoS, compiler optimizations, profiling tools, **100+ curated interview questions** with detailed answers |
+| **12** | [Performance & Master Interview Bank](./12-performance-interview-mastery.md) | CPU cache, SoA/AoS, compiler optimizations, profiling tools, **110 curated interview questions** across 10 categories |
+| **13** | [Low-Latency, HFT & Systems](./13-low-latency-hft-systems.md) | Zero-allocation hot paths, Linux core isolation (`isolcpus`), Kernel Bypass (Solarflare/DPDK), SPSC queues, L2/L3 Order Books, **50+ Quant/HFT interview Q&A** |
 
 ---
 
@@ -103,10 +104,12 @@ Week 11-12 ➤  Modules 11, 12       (Design Patterns & Interview Prep)
 
 | Priority | Topics | Module(s) |
 |----------|--------|-----------|
+| 🔴 **Critical** | Low-Latency & HFT Systems | [13](./13-low-latency-hft-systems.md) |
 | 🔴 **Critical** | Pointers & Smart Pointers | [02](./02-pointers-references-memory.md) |
 | 🔴 **Critical** | Virtual Functions & vtable | [03](./03-oop-deep-dive.md) |
 | 🔴 **Critical** | Move Semantics & `std::forward` | [07](./07-move-semantics-forwarding.md) |
 | 🔴 **Critical** | Multithreading & Atomics | [08](./08-multithreading-concurrency.md) |
+| 🔴 **Critical** | Master Interview Bank (110 Qs) | [12](./12-performance-interview-mastery.md) |
 | 🟡 **Important** | Templates, SFINAE & Concepts | [04](./04-templates-generic-programming.md) |
 | 🟡 **Important** | STL Containers & Algorithms | [05](./05-stl-mastery.md) |
 | 🟡 **Important** | Design Patterns | [11](./11-design-patterns-best-practices.md) |
@@ -144,12 +147,12 @@ cl /std:c++latest ...
 
 | Metric | Value |
 |--------|-------|
-| Total Modules | 13 (including overview) |
-| Content Size | ~350 KB of pure technical content |
-| Interview Questions | **300+** (including 110-question master bank in Mod 12) |
+| Total Modules | 14 (including overview) |
+| Content Size | ~400 KB of pure technical content |
+| Interview Questions | **350+** with detailed architectural solutions |
 | C++ Standards Covered | C++98 → C++23 |
 | Code Examples | Hundreds of compilable snippets |
-| Topics Covered | 60+ major C++ topics |
+| Quant/HFT/Low-Latency | Dedicated deep-dive module with 50+ interview Q&A |
 
 ---
 
