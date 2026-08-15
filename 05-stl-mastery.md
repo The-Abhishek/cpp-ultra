@@ -292,14 +292,120 @@ auto [i, d, s] = get_data();
 
 ### Modern Wrappers (C++17)
 - `std::optional<T>`: Represents an object that might or might not contain a value.
-- `std::variant<T...>`: Type-safe union.
-- `std::any`: Can hold any type.
+- `std::variant<T...>`: Type-safe, exception-safe tagged union.
+- `std::any`: Can hold any copy-constructible type.
 
 ```cpp
+#include <iostream>
+#include <variant>
 #include <optional>
+#include <string>
+
+// Overloaded pattern for std::visit
+template<class... Ts> struct overloaded : Ts... { using Ts::operator()...; };
+template<class... Ts> overloaded(Ts...) -> overloaded<Ts...>;
+
 std::optional<int> divide(int a, int b) {
     if (b == 0) return std::nullopt;
     return a / b;
+}
+
+void test_variant() {
+    std::variant<int, double, std::string> v = 3.14;
+
+    std::visit(overloaded {
+        [](int arg) { std::cout << "int: " << arg << '\n'; },
+        [](double arg) { std::cout << "double: " << arg << '\n'; },
+        [](const std::string& arg) { std::cout << "string: " << arg << '\n'; }
+    }, v);
+}
+```
+
+---
+
+## 7. Writing a Custom STL-Compliant Iterator
+
+Implementing custom iterators allows user-defined containers to seamlessly plug into all standard `<algorithm>` routines and C++20 Ranges pipelines.
+
+```cpp
+#include <iostream>
+#include <iterator>
+#include <cstddef>
+#include <algorithm>
+
+template <typename T>
+class SimpleVector {
+    T* data;
+    size_t sz;
+public:
+    SimpleVector(size_t s) : sz(s), data(new T[s]) {}
+    ~SimpleVector() { delete[] data; }
+
+    T& operator[](size_t i) { return data[i]; }
+
+    // Custom Forward Iterator
+    struct Iterator {
+        using iterator_category = std::forward_iterator_tag;
+        using difference_type   = std::ptrdiff_t;
+        using value_type        = T;
+        using pointer           = T*;
+        using reference         = T&;
+
+        Iterator(pointer ptr) : m_ptr(ptr) {}
+
+        reference operator*() const { return *m_ptr; }
+        pointer operator->() { return m_ptr; }
+
+        Iterator& operator++() { m_ptr++; return *this; }
+        Iterator operator++(int) { Iterator tmp = *this; ++(*this); return tmp; }
+
+        friend bool operator==(const Iterator& a, const Iterator& b) { return a.m_ptr == b.m_ptr; }
+        friend bool operator!=(const Iterator& a, const Iterator& b) { return a.m_ptr != b.m_ptr; }
+
+    private:
+        pointer m_ptr;
+    };
+
+    Iterator begin() { return Iterator(&data[0]); }
+    Iterator end()   { return Iterator(&data[sz]); }
+};
+
+int main() {
+    SimpleVector<int> vec(5);
+    for (int i = 0; i < 5; ++i) vec[i] = (i + 1) * 10;
+
+    // Seamlessly works with range-based for loops and STL algorithms!
+    for (int val : vec) {
+        std::cout << val << " "; // Output: 10 20 30 40 50
+    }
+    std::cout << "\n";
+    return 0;
+}
+```
+
+---
+
+## 8. Polymorphic Memory Resources (std::pmr - C++17)
+
+C++17 introduced `std::pmr` (polymorphic memory resources) to allow switching allocation strategies at runtime without changing the container's type:
+- `std::pmr::vector<T>`
+- `std::pmr::string`
+- `std::pmr::monotonic_buffer_resource`: Ultra-fast stack-based arena allocator that frees all memory in a single block upon destruction.
+
+```cpp
+#include <vector>
+#include <memory_resource>
+#include <array>
+
+void test_pmr() {
+    std::array<std::byte, 1024> stack_buf; // 1KB stack buffer
+    std::pmr::monotonic_buffer_resource mem_pool(stack_buf.data(), stack_buf.size());
+
+    // Vector allocates directly from the stack buffer - ZERO HEAP ALLOCATIONS!
+    std::pmr::vector<int> numbers(&mem_pool);
+    for (int i = 0; i < 100; ++i) {
+        numbers.push_back(i);
+    }
 }
 ```
 
