@@ -21,7 +21,7 @@ Welcome to **C++ Mastery**. This comprehensive course is designed specifically f
 
 ### Module 02: Pointers, References & Memory Management
 *Raw pointers, references, smart pointers (`std::unique_ptr`, `std::shared_ptr`), RAII, memory layout (stack vs. heap), and custom allocators.*
-[View Module 02](./02-memory-management.md)
+[View Module 02](./02-pointers-references-memory.md)
 
 ### Module 03: Object-Oriented Programming Deep Dive
 *Classes, inheritance, polymorphism, virtual dispatch mechanisms (vtables), multiple inheritance, and object slicing.*
@@ -29,39 +29,43 @@ Welcome to **C++ Mastery**. This comprehensive course is designed specifically f
 
 ### Module 04: Templates & Generic Programming
 *Function and class templates, SFINAE, `if constexpr`, C++20 Concepts, variadic templates, and template metaprogramming.*
-[View Module 04](./04-templates-generic.md)
+[View Module 04](./04-templates-generic-programming.md)
 
 ### Module 05: The Standard Template Library
-*Containers (vector, map, etc.), iterators, standard algorithms, and C++20 Ranges.*
-[View Module 05](./05-stl-ranges.md)
+*Containers (vector, map, etc.), custom iterators, standard algorithms, `std::pmr`, `std::variant`, and C++20 Ranges.*
+[View Module 05](./05-stl-mastery.md)
 
 ### Module 06: Modern C++ Features
 *A dedicated tour of features introduced in C++11, C++14, C++17, C++20, and C++23 (e.g., structured bindings, modules, `constexpr`, designated initializers).*
-[View Module 06](./06-modern-features.md)
+[View Module 06](./06-modern-cpp-features.md)
 
 ### Module 07: Move Semantics & Perfect Forwarding
 *Rvalue references, move constructors/assignments, `std::move`, `std::forward`, forwarding references, and copy elision.*
-[View Module 07](./07-move-semantics.md)
+[View Module 07](./07-move-semantics-forwarding.md)
 
 ### Module 08: Multithreading & Concurrency
 *Threads, mutexes, atomics, memory models, asynchronous tasks (`std::async`, futures), and C++20 Coroutines.*
-[View Module 08](./08-concurrency.md)
+[View Module 08](./08-multithreading-concurrency.md)
 
 ### Module 09: Lambda Expressions & Functional C++
 *Closures, lambda captures, `std::function`, `std::invoke`, and functional programming idioms.*
-[View Module 09](./09-lambdas-functional.md)
+[View Module 09](./09-lambdas-functional-cpp.md)
 
 ### Module 10: Error Handling & Exception Safety
 *Exception mechanisms, exception guarantees (basic, strong, no-throw), `noexcept` specifier, and modern alternatives like `std::expected`.*
-[View Module 10](./10-error-handling.md)
+[View Module 10](./10-error-handling-exceptions.md)
 
 ### Module 11: Design Patterns & Best Practices
 *SOLID principles in C++, GoF patterns modernized for C++ (e.g., Type Erasure, CRTP, Pimpl), and idiomatic C++.*
-[View Module 11](./11-design-patterns.md)
+[View Module 11](./11-design-patterns-best-practices.md)
 
-### Module 12: Performance, Optimization & Interview Mastery
-*Cache friendliness, profiling, compiler optimizations, zero-overhead abstractions, and a curated list of 100+ senior interview Q&A.*
-[View Module 12](./12-performance-interviews.md)
+### Module 12: Performance, Optimization & Master Interview Bank
+*Cache friendliness, profiling, compiler optimizations, zero-overhead abstractions, and a curated list of 110 senior interview Q&A.*
+[View Module 12](./12-performance-interview-mastery.md)
+
+### Module 13: Low-Latency, HFT & Ultra-High-Performance Systems
+*Zero-allocation hot paths, Linux OS core isolation (`isolcpus`, `nohz_full`), Kernel Bypass (Solarflare EF_VI / DPDK), Lock-Free SPSC Queues, Limit Order Book (L2/L3) design, Fixed-Point arithmetic, and 50+ Quant/HFT interview Q&A.*
+[View Module 13](./13-low-latency-hft-systems.md)
 
 ---
 
