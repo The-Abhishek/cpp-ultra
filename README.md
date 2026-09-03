@@ -2,7 +2,8 @@
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Standard-C++23-blue?style=for-the-badge" alt="C++23" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
-  <img src="https://img.shields.io/badge/Questions-350%2B-orange?style=for-the-badge" alt="350+ Questions" />
+  <img src="https://img.shields.io/badge/Interview_Qs-350%2B-orange?style=for-the-badge" alt="350+ Questions" />
+  <img src="https://img.shields.io/badge/DSA_Patterns-227-red?style=for-the-badge" alt="227 DSA Patterns" />
 </p>
 
 <h1 align="center">🚀 C++ Mastery: From Foundations to Expert & HFT</h1>
@@ -12,7 +13,7 @@
 </p>
 
 <p align="center">
-  <i>13 in-depth modules • 350+ interview questions with answers • C++11 through C++23 • High-Frequency Trading & Low Latency Systems</i>
+  <i>14 modules • 350+ interview questions • 227 DSA patterns • NeetCode 150 + FAANG • C++11 → C++23 • HFT & Low Latency</i>
 </p>
 
 ---
@@ -49,6 +50,26 @@ This course is specifically designed for:
 | **11** | [Design Patterns & Best Practices](./11-design-patterns-best-practices.md) | GoF patterns in modern C++, CRTP, pimpl, type erasure, NVI, copy-and-swap, Core Guidelines, anti-patterns |
 | **12** | [Performance & Master Interview Bank](./12-performance-interview-mastery.md) | CPU cache, SoA/AoS, compiler optimizations, profiling tools, **110 curated interview questions** across 10 categories |
 | **13** | [Low-Latency, HFT & Systems](./13-low-latency-hft-systems.md) | Zero-allocation hot paths, Linux core isolation (`isolcpus`), Kernel Bypass (Solarflare/DPDK), SPSC queues, L2/L3 Order Books, **50+ Quant/HFT interview Q&A** |
+
+---
+
+## 🧠 DSA Patterns — Quick Reference (NEW)
+
+> **[📁 dsa-patterns/](./dsa-patterns/)** — 227 problems • 17 pattern files • Pure optimized C++ core logic
+
+The DSA section is a **separate quick-reference directory** with just the core logic pattern for each problem — no boilerplate, no verbose explanations. Designed for rapid interview revision.
+
+| Pattern | Problems | Pattern | Problems |
+|---------|:--------:|---------|:--------:|
+| [Arrays & Hashing](./dsa-patterns/01-arrays-and-hashing.md) | 13 | [Heap / Priority Queue](./dsa-patterns/08-heap-priority-queue.md) | 12 |
+| [Two Pointers](./dsa-patterns/02-two-pointers.md) | 10 | [Trie](./dsa-patterns/09-trie.md) | 7 |
+| [Sliding Window](./dsa-patterns/03-sliding-window.md) | 10 | [Graphs](./dsa-patterns/10-graphs.md) | 20 |
+| [Stack & Monotonic Stack](./dsa-patterns/04-stack.md) | 14 | [Backtracking](./dsa-patterns/11-backtracking.md) | 12 |
+| [Binary Search](./dsa-patterns/05-binary-search.md) | 13 | [DP (1D)](./dsa-patterns/12-dynamic-programming-1d.md) | 16 |
+| [Linked List](./dsa-patterns/06-linked-list.md) | 14 | [DP (2D & Advanced)](./dsa-patterns/13-dynamic-programming-2d.md) | 18 |
+| [Trees (BT & BST)](./dsa-patterns/07-trees.md) | 17 | [Greedy & Intervals](./dsa-patterns/14-greedy-intervals.md) | 11 |
+| [Bit Manipulation](./dsa-patterns/15-bit-manipulation.md) | 11 | [Math & Geometry](./dsa-patterns/16-math-and-geometry.md) | 13 |
+| [Advanced (Seg Tree, BIT, KMP)](./dsa-patterns/17-advanced-patterns.md) | 16 | | **227 total** |
 
 ---
 
